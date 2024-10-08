@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #buttons > button
+        {
+             height: 50px;
+             width: 50px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="buttons">
+        <button id="bt1"></button>
+        <button id="bt2"></button>
+        <button id="bt3"></button>
+        <button id="bt4"></button>
+    </div>
+</body>
+</html>
+<script>
+    let buttons = document.querySelectorAll("#buttons > button")
+
+
+    for(let i=0;i<buttons.length;i++)
+{
+   buttons[i].addEventListener("click",function ()
+{
+    if(buttons[i].style.backgroundColor == "red")
+{
+    buttons[i].style.backgroundColor = "white"
+}
+else{
+    buttons[i].style.backgroundColor = "red"
+}
+})
+}
+</script>

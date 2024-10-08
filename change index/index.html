@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta/>
+    </head>
+    <body>
+        <h1 id="fruit_bag"></h1>
+        <button id="fruits-name">next</button>
+    </body>
+</html>
+<script>
+   let fruit_bag =  document.getElementById("fruit_bag");
+    document.getElementById("fruits-name").addEventListener("click",fruit);
+    const array = ["apple","banana","custard-apple","dragon-fruit"];
+    let index = 0;
+  function fruit()
+  {
+    
+    fruit_bag.innerText=array[index];
+
+   index++;
+
+   if(index >= array.length)
+   {
+    index = 0 ;
+   }
+
+   
+}
+  
+</script>

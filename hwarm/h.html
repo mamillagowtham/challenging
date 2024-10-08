@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Agbalumo"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arizonia"
+      rel="stylesheet"
+    />
+
+    <style>
+      #house {
+        height: 700px;
+        width: 600px;
+      }
+
+      #container {
+        display: flex;
+        justify-content: center;
+      }
+
+      #ganesh {
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        position: absolute;
+        top: 50px;
+        left: 730px;
+      }
+
+      #items {
+        position: absolute;
+        top: 140px;
+        left: 530px;
+      }
+
+      #items #ganesh-name,
+      #griha-pravesh,
+      #parents-name,
+      #date,
+      #venue {
+        display: flex;
+        justify-content: center;
+      }
+
+      #ganesh-image {
+        display: flex;
+        justify-content: center;
+      }
+      #ganesh-name
+      {
+        color: orange;
+        text-shadow: 2px 2px 4px #000000;
+
+      }
+      #griha-pravesh {
+        font-family: "Arizonia";
+        color: orange;
+        text-shadow: 2px 2px 4px #000000;
+        position: relative;
+        bottom: 5px;
+      }
+
+      #parents-name {
+        font-family: "Agbalumo";
+        color: orange;
+        text-shadow: 2px 2px 4px #000000;
+        position: relative;
+        bottom: 15px;
+        right: 16px;
+
+
+      }
+
+      #para-1 {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        text-align: center;
+        position: relative;
+        right: 61px;
+        top: 30px;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 700;
+        /* color: rgb(219, 214, 206);*/
+        
+        text-shadow: 2px 2px 4px #dbd2d2;
+
+      }
+
+      #date {
+        font-family: Luminari, fantasy;
+      }
+
+      #venue {
+        font-family: "Agbalumo";
+        height: px;
+        width: px;
+        position: relative;
+        left: 190px;
+        bottom: 95px;
+        /* color: rgb(44, 30, 151); */
+        /* color: rgb(53, 53, 97); */
+
+        color: rgb(59, 2, 59);
+        text-shadow: 2px 2px 4px #b79e9e;
+
+        
+
+
+      }
+
+
+
+      /* modify address so it will move right side  */
+      #para-3 {
+        display: flex;
+        flex-direction: column;
+        width: 180px;
+        text-align: center;
+        position: relative;
+        left: 360px;
+        bottom: 110px;
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 700;
+        /* color: white; */
+        
+        /* text-shadow: 2px 2px 4px #000000; 
+        color: rgb(240, 235, 239); */
+        
+        
+        /* color: rgb(219, 214, 206); */
+        text-shadow: 2px 2px 4px #dbd2d2;
+       
+          }
+
+
+    .date-container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      font-family: 'Georgia', serif;
+      align-items: center;
+    }
+
+    .big-date {
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgb(53, 53, 97);
+      text-shadow: 2px 2px 4px #a79c9c; 
+      
+    }
+
+    .date-details {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      font-size: 15px;
+      color: rgb(53, 53, 97);
+      text-shadow: 2px 2px 4px #c3b9b9; 
+      font-weight: 700;
+      align-items: center;
+    }
+
+    .date-details div {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+    }
+
+    .value {
+      font-style: italic;
+      position: relative;
+      padding-right: 10px;
+    }
+
+    /* Dotted line ends at the text */
+    .value::after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 120%;
+      width: 50px;
+      height: 1px;
+      background-color: transparent;
+      border-bottom: 1px dotted #2c3e50;
+      text-shadow: 2px 2px 4px #000000;
+      transform: translateY(-50%);
+    }
+
+    /* Adjust the dotted line length */
+    .date-details div:nth-child(1) .value::after {
+      width: 90px;
+    }
+
+    .date-details div:nth-child(2) .value::after {
+      width: 70px;
+    }
+
+    .date-details div:nth-child(3) .value::after {
+      width: 50px;
+    }
+
+    .date-container
+    {
+        position: relative;
+        left: 218px;
+        bottom: 210px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <!-- main image -->
+    <div id="container">
+      <img src="./Gruhapravesham Invitation Card.jpeg" id="house" />
+    </div>
+    <!-- ganesh image -->
+    <div id="ganesh-image">
+      <img
+        src="https://img.freepik.com/premium-photo/ganesh-statue-with-ornate-decorations-offerings-clipart-illustration_1007227-2613.jpg"
+        id="ganesh"
+      />
+    </div>
+    <!-- content -->
+    <div id="items">
+      <h4 id="ganesh-name">|| Shree Ganeshaya Namaha ||</h4>
+      <h1 id="griha-pravesh">Griha Pravesh</h1>
+      <h2 id="parents-name">Mr.Ramachandra Raju & Mrs.kanaka Lakshmi</h2>
+
+      <p id="para-1">
+        Cordially Invite you & your family to grace the occasion of Griha
+        Pravesh of our New Home
+      </p>
+
+      <h2 id="date"></h2>
+      <h3 id="venue">:: Venue ::</h3>
+      <p id="para-3"> kodali vari street,Ramavarapadu, Ph:6303055283</p>
+      
+<div class="date-container">
+    <div class="big-date">14</div>
+    <div class="date-details">
+      <div><span class="value">Saturday</span></div>
+      <div><span class="value">October</span></div>
+      <div><span class="value">2024</span></div>
+    </div>
+  </div>
+    </div>
+  </body>
+</html>
