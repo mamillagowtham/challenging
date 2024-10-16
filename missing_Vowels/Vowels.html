@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function findMissingVowels(name) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const nameLower = name.toLowerCase();
+    let missingVowels = [];
+    
+    for (let i = 0; i < vowels.length; i++) {
+      let found = false;
+      
+      for (let j = 0; j < nameLower.length; j++) {
+        if (nameLower[j] === vowels[i]) {
+          found = true;
+          break;
+        }
+      }
+  
+      if (!found) {
+        missingVowels[missingVowels.length] = vowels[i];
+      }
+    }
+    
+    return missingVowels;
+  }
+  
+  const name = "Gowtham";
+  const result = findMissingVowels(name);
+  console.log(`Missing vowels in the name '${name}':`, result);
+</script>
+</html>
+  
